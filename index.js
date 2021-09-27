@@ -5,9 +5,11 @@ const fs = require('fs');
 
 const TIENDA_INGLESA_BEERS = 'https://www.tiendainglesa.com.uy/Categoria/Bebidas/Bebidas-con-alcohol/Cervezas/1001/1/3';
 const PRODUCT_SELECTOR = 'card-product-section';
-const NEXT_PAGE_SELECTOR = '.Section > .wPageSelector:last-child';
+const NEXT_PAGE_SELECTOR = '.Section > .wPageSelector:last-child > a';
+const POPUP_SELECTOR = '.PopupContainer .TextBlock';
 
 async function run(url) {
+  // Inicializar Chrome Headless
   const width = 1920;
   const height = 1600;
   const browser = await puppeteer.launch({
@@ -20,30 +22,32 @@ async function run(url) {
 
   // Hides the location selector popup (clicks on Montevideo)
   const hidePopUp = async function() {
-    await page.evaluate(() => {
-      const location = document.querySelector('.PopupContainer .TextBlock');
+    await page.evaluate((selector) => {
+      const location = document.querySelector(selector);
       if (location) {
         location.click();
       }
-    });
+    }, POPUP_SELECTOR);
   };
 
+  // Abrir página y cerrar el modal
   await page.goto(url);
-  await page.waitForSelector('.PopupContainer .TextBlock');
+  await page.waitForSelector(POPUP_SELECTOR);
   await hidePopUp();
 
   // Checks if there is next page
   const nextPage = async function() {
-    const nextPageURL = await page.evaluate(() => {
-        const anchor = document.querySelector('.Section > .wPageSelector:last-child > a');
+    const nextPageURL = await page.evaluate((selector) => {
+        const anchor = document.querySelector(selector);
         return anchor && anchor.href;
-    });
+    }, NEXT_PAGE_SELECTOR);
     return nextPageURL;
   };
 
   const beers = [];
   let hasNextPage;
   do {
+    // Obtener los productos de una página
     let beersPage = await page.evaluate((selector) => {
         const elements = document.getElementsByClassName(selector);
         const beers = [];
@@ -61,15 +65,17 @@ async function run(url) {
     console.log('beers page', beersPage);
     beers.push(...beersPage);
 
+    // Si hay más paginas, clickear en el botón de next page,
+    // esperar navegación y repetir el scrapping
     hasNextPage = await nextPage();
     if (hasNextPage) {
         await page.waitForTimeout(3000);
         try {
-          await page.waitForSelector('.Section > .wPageSelector:last-child > a', {timeout: 10000});
+          await page.waitForSelector(NEXT_PAGE_SELECTOR, {timeout: 10000});
           await Promise.all([
             page.waitForNavigation(),
-            page.click('.Section > .wPageSelector:last-child > a')
-        ]);
+            page.click(NEXT_PAGE_SELECTOR)
+          ]);
         } catch(err) {}
     }
   } while(hasNextPage);
