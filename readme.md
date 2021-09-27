@@ -2,4 +2,5 @@
 Correr en la consola:
 
 npm install
+
 node index.js
