@@ -1,0 +1,28 @@
+{
+    "pages": {
+        "tiendaInglesa": [
+            {
+                "url": "https://www.tiendainglesa.com.uy/Categoria/Bebidas/Bebidas-con-alcohol/Cervezas/1001/1/3",
+                "output": "products/tienda-inglesa/beers.json",
+                "type": "beer"
+            },
+            {
+                "url": "https://www.tiendainglesa.com.uy/Categoria/Bebidas/Bebidas-con-alcohol/Whisky/1001/1/11",
+                "output": "products/tienda-inglesa/whisky.json",
+                "type": "whisky"
+            }
+        ],
+        "iberpark": [
+            {
+                "url": "https://iberpark.com/shop/category/cervezas-436",
+                "output": "products/iberpark/beers.json",
+                "type": "beer"
+            },
+            {
+                "url": "https://iberpark.com/shop/category/whisky-4159",
+                "output": "products/iberpark/whisky.json",
+                "type": "whisky"
+            }
+        ]
+    }
+}
