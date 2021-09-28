@@ -3,6 +3,10 @@ const puppeteer = require('puppeteer');
 const PRODUCT_SELECTOR = 'card-product-section';
 const NEXT_PAGE_SELECTOR = '.Section > .wPageSelector:last-child > a';
 const POPUP_SELECTOR = '.PopupContainer .TextBlock';
+const PRODUCT_NAME_SELECTOR = '.card-product-name';
+const PRODUCT_PRICE_SELECTOR = '.ProductPrice';
+const PRODUCT_LINK_SELECTOR = 'a';
+const PRODUCT_IMAGE_SELECTOR = 'img';
 
 // Inicializar Chrome Headless
 async function initBrowser() { 
@@ -39,20 +43,31 @@ async function nextPage(page) {
 };
 
 async function getProductsFromPage(page) {
+  const selectors = {
+    productSel: PRODUCT_SELECTOR,
+    titleSel: PRODUCT_NAME_SELECTOR,
+    priceSel: PRODUCT_PRICE_SELECTOR,
+    imageSel: PRODUCT_IMAGE_SELECTOR,
+    linkSel: PRODUCT_LINK_SELECTOR
+  };
+
   // Obtener los productos de una página
-  return await page.evaluate((selector) => {
-    const elements = document.getElementsByClassName(selector);
+  return await page.evaluate(selectors => {
+    const { productSel, titleSel, priceSel, imageSel, linkSel } = selectors;
+    const elements = document.getElementsByClassName(productSel);
     const products = [];
     let product;
     for (let element of elements) {
         product = {
-            title: element.querySelector('.card-product-name').innerHTML,
-            price: element.querySelector('.ProductPrice').innerHTML,
+            title: element.querySelector(titleSel).innerHTML,
+            price: element.querySelector(priceSel).innerHTML,
+            image: element.querySelector(imageSel).src,
+            link: element.querySelector(linkSel).href
         };
         products.push(product);
     }
     return products;
-  }, PRODUCT_SELECTOR);
+  }, selectors);
 }
 
 async function goToNextPage(page) {
@@ -80,6 +95,7 @@ async function scrapCategoryTI(startUrl) {
   let hasNextPage;
   do {
     const productsPage = await getProductsFromPage(page);
+    console.log(productsPage);
     products.push(...productsPage);
 
     // Si hay más paginas, clickear en el botón de next page, esperar navegación y repetir el scrapping
