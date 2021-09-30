@@ -12,6 +12,7 @@ exports.getAll = async () => {
                 'hits.total.value',
                 'hits.hits._source'
             ],
+            size: 1000,
             body: {
               query: {
                 match_all: {}
