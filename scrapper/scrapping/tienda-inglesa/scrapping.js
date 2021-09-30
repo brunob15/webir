@@ -42,7 +42,7 @@ async function nextPage(page) {
   return nextPageURL;
 };
 
-async function getProductsFromPage(page, category, store) {
+async function getProductsFromPage(page, category, store, brand) {
   const selectors = {
     productSel: PRODUCT_SELECTOR,
     titleSel: PRODUCT_NAME_SELECTOR,
@@ -52,7 +52,7 @@ async function getProductsFromPage(page, category, store) {
   };
 
   // Obtener los productos de una página
-  return await page.evaluate((selectors, category, store) => {
+  return await page.evaluate((selectors, category, store, brand) => {
     const { productSel, titleSel, priceSel, imageSel, linkSel } = selectors;
     const elements = document.getElementsByClassName(productSel);
 
@@ -65,12 +65,13 @@ async function getProductsFromPage(page, category, store) {
             image: element.querySelector(imageSel).src,
             link: element.querySelector(linkSel).href,
             category,
-            store
+            store,
+            brand
         };
         products.push(product);
     }
     return products;
-  }, selectors, category, store);
+  }, selectors, category, store, brand);
 }
 
 async function goToNextPage(page) {
@@ -84,7 +85,7 @@ async function goToNextPage(page) {
   } catch(err) {}
 }
 
-async function scrapCategoryTI(startUrl, category, store) {
+async function scrapCategoryTI(startUrl, category, store, brand) {
   const { browser, page } = await initBrowser();  
 
   // Abrir página inicial
@@ -97,7 +98,7 @@ async function scrapCategoryTI(startUrl, category, store) {
   const products = [];
   let hasNextPage;
   do {
-    const productsPage = await getProductsFromPage(page, category, store);
+    const productsPage = await getProductsFromPage(page, category, store, brand);
     products.push(...productsPage);
 
     // Si hay más paginas, clickear en el botón de next page, esperar navegación y repetir el scrapping

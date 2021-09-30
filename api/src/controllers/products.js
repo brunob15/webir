@@ -1,11 +1,14 @@
 const products = require('../services/products');
 
 exports.getAll = (req, res) => {
-    products.getAll().then(response => {
+    const searchTerm = req.query.searchTerm;
+    
+    products.getAll(searchTerm).then(response => {
         if (response.status === 'success') {
+            const items = response.results.body.hits.hits || [];
             const results = {
                 total: response.results.body.hits.total.value,
-                items: response.results.body.hits.hits.map(item => item._source)
+                items: items.map(item => item._source)
             };
             res.send({
                 status: 'success',

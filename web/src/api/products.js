@@ -1,7 +1,11 @@
 import { instance } from "./axios";
 
-const getProducts = async () => {
-    const response = await instance.get('/products');
+const getProducts = async (searchTerm) => {
+    const response = await instance.get('/products', {
+        params: {
+            searchTerm
+        }
+    });
     return response.data;
 };
 

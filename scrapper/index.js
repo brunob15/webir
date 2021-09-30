@@ -2,13 +2,13 @@ const { scrapCategoryTI } = require('./scrapping/tienda-inglesa/scrapping');
 const { run } = require('./elasticsearch/store-products');
 const config = require('./config.json');
 
-const TIENDA_INGLESA = 'tienda inglesa';
-
 // Scrapear cada pagina del archivo de configuracion
-config.pages.tiendaInglesa.forEach(page => {
-  scrapCategoryTI(page.url, page.type, TIENDA_INGLESA).then(products => {
-    run(products).catch(console.log)
-  });
-});
+(async function() {
+  for (let i = 0; i < config.pages.length; i++) {
+    const page = config.pages[i];
+    const products = await scrapCategoryTI(page.url, page.category, page.store, page.brand);
+    run(products).catch(console.log);
+  }
+})().then();
 
-// TODO: Scrapear páginas de Iberpark
+// TODO: Scrapear páginas de otros lugares

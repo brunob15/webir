@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -47,7 +48,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Header() {
+export default function Header({ onSearch }) {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearchKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      onSearch(searchTerm);
+    }
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -67,6 +76,13 @@ export default function Header() {
             <StyledInputBase
               placeholder="Buscar…"
               inputProps={{ 'aria-label': 'search' }}
+              sx={{ display: 'block' }}
+              onKeyPress={(e) => {
+                handleSearchKeyPress(e, searchTerm)
+              }}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+              }}
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />

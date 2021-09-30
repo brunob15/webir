@@ -11,7 +11,7 @@ import Icon from '@mui/material/Icon';
 function Product({ product }) {
     return (
         <Card variant="outlined" sx={{ maxWidth: 345 }}>
-            <CardActionArea sx={{ height: 350 }}>
+            <CardActionArea sx={{ height: 350 }} href={product.link} target="_blank">
                 <CardMedia
                     component="img"
                     height="230"

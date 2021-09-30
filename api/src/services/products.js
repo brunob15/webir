@@ -4,8 +4,18 @@ const client = new Client({
   node: 'http://localhost:9200'
 });
 
-exports.getAll = async () => {
+exports.getAll = async (searchTerm) => {
     try {
+        let query = {};
+
+        if (searchTerm && searchTerm.length > 0) {
+            query.match = {
+                title: searchTerm
+            };
+        } else {
+            query.match_all = {};
+        }
+
         const results = await client.search({
             index: 'products',
             filterPath : [
@@ -14,9 +24,7 @@ exports.getAll = async () => {
             ],
             size: 1000,
             body: {
-              query: {
-                match_all: {}
-              }
+              query
             }
         });
 
