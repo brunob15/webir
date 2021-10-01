@@ -5,6 +5,22 @@ const client = new Client({
   node: 'http://localhost:9200'
 });
 
+async function createIndex() {
+  await client.indices.delete({ index: 'products' });
+  await client.indices.create({ index: 'products' });
+  await client.indices.putMapping({
+    index: 'products',
+    body: {
+      properties: {
+        url: { type: 'keyword' },
+        category: { type: 'keyword' },
+        store: { type: 'keyword' },
+        brand: { type: 'keyword' }
+      }
+    }
+  });
+}
+
 async function run(dataset) {
     const body = dataset.flatMap(doc => [{ index: { _index: 'products' } }, doc]);
   
@@ -37,5 +53,6 @@ async function run(dataset) {
 }
 
 module.exports = {
-    run
+    run,
+    createIndex
 };

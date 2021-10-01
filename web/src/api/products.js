@@ -9,4 +9,9 @@ const getProducts = async (searchTerm) => {
     return response.data;
 };
 
-export { getProducts };
+const getFilters = async () => {
+    const response = await instance.get('/products/filters');
+    return response.data;
+};
+
+export { getProducts, getFilters };

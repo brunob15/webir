@@ -6,7 +6,8 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { getProducts } from '../../api/products';
 import Product from '../product/Product';
-import { textAlign } from '@mui/system';
+import Filters from '../filters/Filters';
+import './Products.scss';
 
 const Item = styled(Paper)(({ theme }) => ({
 }));
@@ -25,19 +26,28 @@ function Products({ searchTerm }) {
 
   return (
     <div className="products">
-      <h1>Bebidas</h1>
+      <h1 className="title">Bebidas</h1>
+
       { products.length === 0 && <h2 style={{textAlign: 'center'}}>No hay resultados</h2> }
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          { 
-            products.map(product => (
-              <Grid item xs={12} md={3} key={product.title}>
-                  <Product product={product} />
-              </Grid>
-            ))
-          }
-        </Grid>
-      </Box>
+
+      <div className="products_content">
+        <div className="filters">
+          <Filters />
+        </div>
+        <div className="products">
+          <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacing={2}>
+              { 
+                products.map(product => (
+                  <Grid item xs={12} md={3} key={product.title}>
+                      <Product product={product} />
+                  </Grid>
+                ))
+              }
+            </Grid>
+          </Box>
+        </div>
+      </div>
     </div>
   );
 }

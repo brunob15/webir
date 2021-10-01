@@ -60,32 +60,33 @@ export default function Header({ onSearch }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1 }}
-          >
-            WEBIRRA
-          </Typography>
-          <Search sx={{ flexGrow: 2 }}>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Buscar…"
-              inputProps={{ 'aria-label': 'search' }}
-              sx={{ display: 'block' }}
-              onKeyPress={(e) => {
-                handleSearchKeyPress(e, searchTerm)
-              }}
-              onChange={(e) => {
-                setSearchTerm(e.target.value);
-              }}
-            />
-          </Search>
-          <Box sx={{ flexGrow: 1 }} />
+        <Toolbar sx={{ width: '100%', justifyContent: 'center' }}>
+          <Box sx={{ width: '1200px', display: 'flex' }}>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ flexGrow: 1 }}
+            >
+              WEBIRRA
+            </Typography>
+            <Search sx={{ flexGrow: 2 }}>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Buscar…"
+                inputProps={{ 'aria-label': 'search' }}
+                sx={{ display: 'block' }}
+                onKeyPress={(e) => {
+                  handleSearchKeyPress(e, searchTerm)
+                }}
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                }}
+              />
+            </Search>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>

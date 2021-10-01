@@ -1,0 +1,15 @@
+.products {
+    .title {
+        margin-top: 80px;
+    }
+
+    &_content {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        margin-top: 50px;
+
+        .filters {
+            margin-right: 20px;
+        }
+    }
+}

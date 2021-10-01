@@ -5,5 +5,8 @@ module.exports = (app) => {
     // Get all products
     router.get('/', products.getAll);
 
+    // Get products filters
+    router.get('/filters', products.getFilters);
+
     app.use('/api/products', router);
 };

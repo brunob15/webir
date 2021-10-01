@@ -39,3 +39,51 @@ exports.getAll = async (searchTerm) => {
         };
     }
 };
+
+// Obtener los filtros (locales y marcas)
+exports.getFilters = async () => {
+    try {
+        const results = await client.search({
+            index: 'products',
+            body: {
+                aggs: {
+                    marcas: {
+                        terms: {
+                            field: 'brand'
+                        }
+                    },
+                    tiendas: {
+                        terms: {
+                            field: 'store'
+                        }
+                    }
+                }
+            }
+        });
+
+        const aggregations = results.body.aggregations || {};
+        const filters =
+            Object
+                .keys(aggregations)
+                .map(filterName => {
+                    return {
+                        title: filterName,
+                        values: getFilterValues(aggregations, filterName)
+                    };
+                })
+
+        return {
+            status: 'success',
+            filters
+        };
+    } catch(error) {
+        return {
+            status: 'error',
+            error
+        };
+    }
+};
+
+function getFilterValues(aggregations, filterName) {
+    return aggregations[filterName].buckets.map(bucket => bucket.key);
+}
