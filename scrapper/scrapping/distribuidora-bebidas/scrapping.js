@@ -1,8 +1,6 @@
 const puppeteer = require("puppeteer");
 
 const PRODUCT_SELECTOR = "#left-area > ul > li.product.type-product";
-// const NEXT_PAGE_SELECTOR = ".Section > .wPageSelector:last-child > a";
-// const POPUP_SELECTOR = ".PopupContainer .TextBlock";
 const PRODUCT_NAME_SELECTOR = ".woocommerce-loop-product__title";
 const PRODUCT_PRICE_SELECTOR = ".woocommerce-Price-amount";
 const PRODUCT_LINK_SELECTOR = ".woocommerce-LoopProduct-link";
@@ -21,25 +19,6 @@ async function initBrowser() {
   await page.setViewport({ width: width, height: height });
 
   return { browser, page };
-}
-
-// Hides the location selector popup (clicks on Montevideo)
-async function hidePopUp(page) {
-  await page.evaluate((selector) => {
-    const location = document.querySelector(selector);
-    if (location) {
-      location.click();
-    }
-  }, POPUP_SELECTOR);
-}
-
-// Checks if there is next page
-async function nextPage(page) {
-  const nextPageURL = await page.evaluate((selector) => {
-    const anchor = document.querySelector(selector);
-    return anchor && anchor.href;
-  }, NEXT_PAGE_SELECTOR);
-  return nextPageURL;
 }
 
 async function getProductsFromPage(page, category, store, brand) {
@@ -84,40 +63,13 @@ async function getProductsFromPage(page, category, store, brand) {
   );
 }
 
-async function goToNextPage(page) {
-  await page.waitForTimeout(3000);
-  try {
-    await page.waitForSelector(NEXT_PAGE_SELECTOR, { timeout: 10000 });
-    await Promise.all([
-      page.waitForNavigation(),
-      page.click(NEXT_PAGE_SELECTOR),
-    ]);
-  } catch (err) {}
-}
-
 async function scrapCategoryDB(startUrl, category, store, brand) {
   const { browser, page } = await initBrowser();
 
   // Abrir página inicial
   await page.goto(startUrl);
 
-  // // Cerrar modal. Si no, no funciona el link a las proximas paginas
-  // await page.waitForSelector(POPUP_SELECTOR);
-  // await hidePopUp(page);
-
-  const products = [];
-  // let hasNextPage;
   const productsPage = await getProductsFromPage(page, category, store, brand);
-  // products.push(...productsPage);
-  // do {
-  //   // products.push(...productsPage);
-  //   // Si hay más paginas, clickear en el botón de next page, esperar navegación y repetir el scrapping
-  //   // hasNextPage = await nextPage(page);
-  //   // if (hasNextPage) {
-  //   //   await goToNextPage(page);
-  //   // }
-  // } while (hasNextPage);
-  console.log(JSON.stringify(productsPage));
   await browser.close();
   return productsPage;
 }

@@ -3,38 +3,39 @@ const {
   scrapCategoryDB,
 } = require("./scrapping/distribuidora-bebidas/scrapping");
 const { run, createIndex } = require("./elasticsearch/store-products");
-const dbConfig = require("./db_config.json");
+const config = require("./config.json");
 const fs = require("fs");
-// const config = require("./config.json");
 
 // Scrapear cada pagina del archivo de configuracion
 (async function () {
-  // await createIndex();
-  // for (let i = 0; i < config.pages.length; i++) {
-  //   const page = config.pages[i];
-  //   const products = await scrapCategoryTI(
-  //     page.url,
-  //     page.category,
-  //     page.store,
-  //     page.brand
-  //   );
-  //   run(products).catch(console.log);
-  // }
-  // await createIndex();
+  await createIndex();
   let productsArray = [];
-  for (let i = 0; i < dbConfig.pages.length; i++) {
-    const page = dbConfig.pages[i];
-    const products = await scrapCategoryDB(
-      page.url,
-      page.category,
-      page.store,
-      page.brand
-    );
-    productsArray = productsArray.concat(products);
-    //   run(products).catch(console.log);
+  for (let i = 0; i < config.length; i++) {
+    for (let j = 0; j < config[i].pages.length; j++) {
+      const name = config[i].name;
+      const page = config[i].pages[j];
+      let products = null;
+      if (name === "distribuidora bebidas") {
+        products = await scrapCategoryDB(
+          page.url,
+          page.category,
+          page.store,
+          page.brand
+        );
+      }
+      if (name === "tienda inglesa") {
+        products = await scrapCategoryTI(
+          page.url,
+          page.category,
+          page.store,
+          page.brand
+        );
+      }
+      if (products) {
+        productsArray = productsArray.concat(products);
+      }
+    }
   }
-  const data = JSON.stringify(products);
-  fs.writeFileSync("distribuidora.json", data);
+  console.log("Products: ", productsArray);
+  run(productsArray).catch(console.log);
 })().then();
-
-// TODO: Scrapear páginas de otros lugares

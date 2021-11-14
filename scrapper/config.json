@@ -1,196 +1,264 @@
-{
-  "pages": [
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Patagonia%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "patagonia"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Patricia%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "patricia"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Volcanica%22%5D,true,%5B%5D,%5B%5D,,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "volcanica"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Zillertal%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "zillertal"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Mahou%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "mahou"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Fuller%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "fuller"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Stella+artois%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "stella artois"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Cabesas%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "cabesas"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Heineken%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "heineken"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Mastra%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "mastra"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Pilsen%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "pilsen"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Bizarra%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "bizarra"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Budweiser%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "budweiser"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Corona%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "corona"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Dab%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "dab"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Estrella+damm%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "estrella damm"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22ROCCO+BEER%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "rocco beer"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Schofferhofer%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "beer",
-      "store": "tienda inglesa",
-      "brand": "schofferhofer"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Johnnie+walker%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "johnnie walker"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Chivas+regal%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "chivas regal"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Jack+daniels%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "jack daniels"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Jameson%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "jameson"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22William+lawsons%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "william lawsons"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22100+pipers%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "100 pipers"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Ballantines%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "ballantines"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Dewars%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "dewars"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Jim+beam%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "jim beam"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Criadores%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "criadores"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Grants%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "grants"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Sandy+mac%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "sandy mac"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Vat+69%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "vat 69"
-    },
-    {
-      "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22White+horse%22%5D,true,%5B%5D,%5B%5D,",
-      "category": "whisky",
-      "store": "tienda inglesa",
-      "brand": "white horse"
-    }
-  ]
-}
+[
+  {
+    "name": "distribuidora bebidas",
+    "pages": [
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/categoria-producto/cervezas/cervezas-clasicas/brahma/",
+        "category": "beer",
+        "store": "distribuidora bebidas",
+        "brand": "brahma"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/categoria-producto/cervezas/cervezas-clasicas/corona/",
+        "category": "beer",
+        "store": "distribuidora bebidas",
+        "brand": "corona"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/categoria-producto/cervezas/cervezas-clasicas/estrella-galicia/",
+        "category": "beer",
+        "store": "distribuidora bebidas",
+        "brand": "estrella galicia"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/categoria-producto/cervezas/cervezas-clasicas/heineken/",
+        "category": "beer",
+        "store": "distribuidora bebidas",
+        "brand": "heineken"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/categoria-producto/cervezas/cervezas-clasicas/imperial/",
+        "category": "beer",
+        "store": "distribuidora bebidas",
+        "brand": "imperial"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/categoria-producto/cervezas/cervezas-clasicas/patagonia/",
+        "category": "beer",
+        "store": "distribuidora bebidas",
+        "brand": "patagonia"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/categoria-producto/cervezas/cervezas-clasicas/patricia/",
+        "category": "beer",
+        "store": "distribuidora bebidas",
+        "brand": "patricia"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/categoria-producto/cervezas/cervezas-clasicas/schneider/",
+        "category": "beer",
+        "store": "distribuidora bebidas",
+        "brand": "schneider"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/categoria-producto/cervezas/cervezas-clasicas/stella-artois/",
+        "category": "beer",
+        "store": "distribuidora bebidas",
+        "brand": "stella artois"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/categoria-producto/cervezas/cervezas-clasicas/zillertal/",
+        "category": "beer",
+        "store": "distribuidora bebidas",
+        "brand": "zillertal"
+      }
+    ]
+  },
+  {
+    "name": "tienda inglesa",
+    "pages": [
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Patagonia%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "patagonia"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Patricia%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "patricia"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Volcanica%22%5D,true,%5B%5D,%5B%5D,,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "volcanica"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Zillertal%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "zillertal"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Mahou%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "mahou"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Fuller%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "fuller"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Stella+artois%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "stella artois"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Cabesas%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "cabesas"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Heineken%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "heineken"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Mastra%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "mastra"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Pilsen%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "pilsen"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Bizarra%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "bizarra"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Budweiser%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "budweiser"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Corona%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "corona"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Dab%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "dab"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Estrella+damm%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "estrella damm"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22ROCCO+BEER%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "rocco beer"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,3,rel,%5B%22Schofferhofer%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "beer",
+        "store": "tienda inglesa",
+        "brand": "schofferhofer"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Johnnie+walker%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "johnnie walker"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Chivas+regal%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "chivas regal"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Jack+daniels%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "jack daniels"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Jameson%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "jameson"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22William+lawsons%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "william lawsons"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22100+pipers%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "100 pipers"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Ballantines%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "ballantines"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Dewars%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "dewars"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Jim+beam%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "jim beam"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Criadores%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "criadores"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Grants%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "grants"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Sandy+mac%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "sandy mac"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22Vat+69%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "vat 69"
+      },
+      {
+        "url": "https://www.tiendainglesa.com.uy/busqueda?0,0,*:*,1001,1,11,rel,%5B%22White+horse%22%5D,true,%5B%5D,%5B%5D,",
+        "category": "whisky",
+        "store": "tienda inglesa",
+        "brand": "white horse"
+      }
+    ]
+  }
+]

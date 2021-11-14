@@ -2,11 +2,11 @@ const { Client } = require("@elastic/elasticsearch");
 
 const client = new Client({
   cloud: {
-    id: "Webir:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvJDJhMDE1NjE0ZjliMDQzYjVhMzM3OTQyYmFjNTE5ZTQxJGY5NDRhNmY0ZGQ5MzQwY2ZiODk3ZWVlNTBiYTAwZDgw",
+    id: "Webir:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvJDg1ZmM1NTQwNjNlOTQxMTk4ZjE1YzY0Y2VhZGUxNjM3JDQ5OGJhMWRkM2I0YTRjODdhNjkyZDgzZjlkOGNlYWZj",
   },
   auth: {
     username: "elastic",
-    password: "65ZkBZpDhHPwEijEbsmQLQGC",
+    password: "kdIcz9ILQp5MWueyPS4iFFxe",
   },
 });
 
