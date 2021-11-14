@@ -35,7 +35,6 @@ async function getProductsFromPage(page, category, store, brand) {
     (selectors, category, store, brand) => {
       const { productSel, titleSel, priceSel, imageSel, linkSel } = selectors;
       const elements = document.querySelectorAll(productSel);
-      console.log("Elements: ", elements);
 
       const products = [];
       let product;

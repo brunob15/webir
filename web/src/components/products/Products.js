@@ -1,17 +1,13 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { getProducts } from "../../api/products";
 import Product from "../product/Product";
 import Filters from "../filters/Filters";
 import "./Products.scss";
 
-const Item = styled(Paper)(({ theme }) => ({}));
-
-function Products({ searchTerm }) {
+function Products({ searchTerm, setSearchTerm }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -32,7 +28,7 @@ function Products({ searchTerm }) {
 
       <div className="products_content">
         <div className="filters">
-          <Filters />
+          <Filters setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
         </div>
         <div className="products">
           <Box sx={{ flexGrow: 1 }}>

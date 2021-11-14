@@ -36,6 +36,5 @@ const fs = require("fs");
       }
     }
   }
-  console.log("Products: ", productsArray);
   run(productsArray).catch(console.log);
 })().then();

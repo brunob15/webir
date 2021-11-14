@@ -10,16 +10,25 @@ const client = new Client({
   },
 });
 
-exports.getAll = async (searchTerm) => {
+exports.getAll = async (params) => {
   try {
-    let query = {};
+    const title = params.title;
+    const brand = params.brand;
+    const store = params.store;
 
-    if (searchTerm && searchTerm.length > 0) {
-      query.match = {
-        title: searchTerm,
-      };
-    } else {
-      query.match_all = {};
+    const must = [];
+    if (title) {
+      must.push({ match: { title } });
+    }
+    if (brand?.length) {
+      brand.forEach((element) => {
+        must.push({ match: { brand: element } });
+      });
+    }
+    if (store?.length) {
+      store.forEach((element) => {
+        must.push({ match: { store: element } });
+      });
     }
 
     const results = await client.search({
@@ -27,7 +36,11 @@ exports.getAll = async (searchTerm) => {
       filterPath: ["hits.total.value", "hits.hits._source"],
       size: 1000,
       body: {
-        query,
+        query: {
+          bool: {
+            must,
+          },
+        },
       },
     });
 
@@ -36,6 +49,7 @@ exports.getAll = async (searchTerm) => {
       results,
     };
   } catch (error) {
+    console.log(error);
     return {
       status: "error",
       error,
