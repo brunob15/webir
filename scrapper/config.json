@@ -61,6 +61,78 @@
         "category": "beer",
         "store": "distribuidora bebidas",
         "brand": "zillertal"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=johnnie&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "johnnie walker"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=jameson&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "jameson"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=sandy&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "sandy"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=william&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "william lawsons"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=daniels&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "jack daniels"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=beam&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "jim beam"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=gregsons&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "gregsons"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=chivas&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "chivas regal"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=glenfiddich&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "glenfiddich"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=macallan&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "macallan"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=dalmore&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "dalmore"
+      },
+      {
+        "url": "https://www.distribuidorabebidas.com.uy/?s=jura&post_type=product&type_aws=true",
+        "category": "whisky",
+        "store": "distribuidora bebidas",
+        "brand": "jura"
       }
     ]
   },

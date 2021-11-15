@@ -20,8 +20,14 @@ function Filters({ setSearchTerm, searchTerm }) {
       setSearchTerm((prev) => ({ ...prev, [title]: filtered }));
       return;
     }
-    const values = searchTerm[title];
-    values.push(value);
+    console.log('searchTerm', searchTerm);
+    let values = searchTerm[title];
+    if (!values) {
+      values = [value]
+    } else {
+      values.push(value);
+    }
+    
     setSearchTerm((prev) => ({ ...prev, [title]: values }));
   };
 
