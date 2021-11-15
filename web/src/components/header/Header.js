@@ -64,7 +64,7 @@ export default function Header({ onSearch }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar sx={{ width: "100%", justifyContent: "center" }}>
+        <Toolbar sx={{ width: "100%", justifyContent: "center", padding: "0px !important" }}>
           <Box sx={{ width: "1200px", display: "flex" }}>
             <Typography
               variant="h6"

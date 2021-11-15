@@ -1,0 +1,26 @@
+.product {
+    height: 100%;
+
+    .action-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        .card-content {
+            .brand {
+                padding: 2px 10px;
+                color: white;
+                align-items: flex-end;
+        
+                &.brand-distribuidora-bebidas {
+                    background-color: #272c33;
+                }
+        
+                &.brand-tienda-inglesa {
+                    background-color: #ed2f48;
+                }
+            }
+        }
+    }
+}

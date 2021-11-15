@@ -20,14 +20,18 @@ exports.getAll = async (params) => {
     if (title) {
       must.push({ match: { title } });
     }
+
+    let brandsFilter = [];
     if (brand?.length) {
-      brand.forEach((element) => {
-        must.push({ match: { brand: element } });
+      brandsFilter = brand.map((element) => {
+        return { match: { brand: element } };
       });
     }
+
+    let storesFilter = [];
     if (store?.length) {
-      store.forEach((element) => {
-        must.push({ match: { store: element } });
+      storesFilter = store.map((element) => {
+        return { match: { store: element } };
       });
     }
 
@@ -38,7 +42,23 @@ exports.getAll = async (params) => {
       body: {
         query: {
           bool: {
-            must,
+            must: [
+              ...must,
+              {
+                bool: {
+                  should: [
+                    ...brandsFilter
+                  ]
+                }
+              },
+              {
+                bool: {
+                  should: [
+                    ...storesFilter
+                  ]
+                }
+              }
+            ]
           },
         },
       },
@@ -67,11 +87,13 @@ exports.getFilters = async () => {
           marcas: {
             terms: {
               field: "brand",
+              size: 10000
             },
           },
           tiendas: {
             terms: {
               field: "store",
+              size: 10000
             },
           },
         },

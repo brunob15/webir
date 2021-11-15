@@ -5,18 +5,19 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Box from "@mui/material/Box";
+import "./Product.scss";
 
 function Product({ product }) {
   return (
-    <Card variant="outlined">
-      <CardActionArea href={product.link} target="_blank">
+    <Card variant="outlined" className="product">
+      <CardActionArea href={product.link} target="_blank" className="action-area">
         <CardMedia
           component="img"
           height="230"
           image={product.image}
           alt={product.title}
         />
-        <CardContent>
+        <CardContent className="card-content">
           <Typography gutterBottom variant="h5" component="div">
             $ {product.price}
           </Typography>
@@ -26,6 +27,7 @@ function Product({ product }) {
           <Box display="flex" justifyContent="flex-end" mt={1}>
             <Typography
               style={{ textTransform: "capitalize" }}
+              className={`brand brand-${product.store.toLowerCase().replace(' ', '-')}`}
               variant="caption"
               color="text.secondary"
             >
